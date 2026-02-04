@@ -11,7 +11,7 @@ app.post("/produtos", async (req, res) => {
   const { produto, quantidade, } = req.body;
 
   const result = await pool.query(
-    "INSERT INTO proutos (produto, quantidade) VALUES ($1,$2) RETURNING *",
+    "INSERT INTO produtos (produto, quantidade) VALUES ($1,$2) RETURNING *",
     [produto, quantidade]
   );
 
